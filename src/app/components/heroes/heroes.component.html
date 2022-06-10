@@ -1,27 +1,6 @@
-<!-- <h2>{{ hero.name | uppercase }} Details</h2>
-
-<div>
-  <label for="name">Hero name: </label>
-  <input
-    type="text"
-    id="name"
-    [(ngModel)]="hero.name"
-    placeholder="hero name"
-  />
-</div> -->
-
-<!-- List of Heroes -->
-<!-- <br />
-<div *ngFor="let hero of heroes">
-  <div>
-    Id: <span>{{ hero.id }}</span>
-  </div>
-  <div>
-    Name: <span>{{ hero.name }}</span>
-  </div>
-</div> -->
-
+<!-- List of Heroes and Input for 2-way binding -->
 <h2>My Heroes</h2>
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <button
@@ -35,17 +14,5 @@
   </li>
 </ul>
 
-<!-- Hero Details -->
-<div *ngIf="selectedHero">
-  <h2>{{ selectedHero.name | uppercase }}</h2>
-  <div>Id: {{ selectedHero.id }}</div>
-  <div>
-    <label for="name">Hero name: </label>
-    <input
-      type="text"
-      id="name"
-      [(ngModel)]="selectedHero.name"
-      placeholder="hero name"
-    />
-  </div>
-</div>
+<!-- hero details -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
