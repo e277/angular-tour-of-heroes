@@ -1,4 +1,15 @@
-<h3 class="text-blue-400">{{ title }}</h3>
+<h1 class="text-blue-400">{{ title }}</h1>
 
 <!-- From Hero component -->
-<app-heroes></app-heroes>
+<!-- <app-heroes></app-heroes> -->
+
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<!-- Router Outlet -->
+<router-outlet></router-outlet>
+
+<!-- From Message component -->
+<app-messages></app-messages>
